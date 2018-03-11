@@ -9,7 +9,7 @@ val loggerDeps = "log4j" % "log4j" % "1.2.17"
 
 coverageEnabled := true
 
-lazy val root = (project in file(".")) aggregate(accounts, inventory, checkout, apiResources, dashboard)
+lazy val root = (project in file(".")) aggregate(accounts, inventory, checkOut, apiResources, dashboard)
 
 lazy val accounts = (project in file("accounts"))
     .dependsOn(inventory)
@@ -22,13 +22,13 @@ lazy val inventory = (project in file("inventory"))
     libraryDependencies ++= Seq(testDeps,loggerDeps)
   )
 
-lazy val apiResources = (project in file("api-resources"))
-  .dependsOn(accounts,inventory,checkout)
+lazy val apiResources = (project in file("apiResource"))
+  .dependsOn(accounts,inventory,checkOut)
   .settings(
     libraryDependencies ++= Seq(testDeps,loggerDeps)
   )
 
-lazy val checkout = (project in file("checkOut"))
+lazy val checkOut = (project in file("checkOut"))
   .dependsOn(inventory,accounts)
   .settings(
     libraryDependencies ++= Seq(testDeps,loggerDeps)

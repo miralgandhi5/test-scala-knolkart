@@ -7,8 +7,9 @@ import scala.concurrent.Future
 
 class InventoryServices {
 
-  val items: List[Item] = List[Item](Item("motog3", "phone", "MOTOROLA", "electronics", 3, 12500), Item("kurti", "indian wear", "WOMEN WEAR", "clothing", 4, 1250))
 
+  val items: List[Item] = List[Item](Item("motog3", "phone", "MOTOROLA", "electronics", 3, 12500),
+    Item("kurti", "indian wear", "WOMEN WEAR", "clothing", 4, 1250))
   /**
     * search items on based f category.
     *

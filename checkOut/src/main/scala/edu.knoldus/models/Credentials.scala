@@ -1,5 +1,3 @@
 package edu.knoldus.models
 
-case class Credentials(userName: String, password: String, accessToken: String) {
-
-}
+case class Credentials(userName: String, password: String, accessToken: String)

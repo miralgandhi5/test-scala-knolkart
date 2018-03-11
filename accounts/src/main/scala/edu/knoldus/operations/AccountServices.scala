@@ -57,7 +57,7 @@ class AccountServices {
   def authenticateUser(userName: String, password: String): Option[String] = {
 
     registeredUsers.find(user => user.mobileNumber == userName && user.password == password) match {
-      case Some(user) => Some(user.name+user.mobileNumber)
+      case Some(user) => Some(user.name + user.mobileNumber)
       case None => None
     }
 

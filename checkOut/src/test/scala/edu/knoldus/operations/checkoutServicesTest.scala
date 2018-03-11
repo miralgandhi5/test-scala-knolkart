@@ -1,12 +1,13 @@
 package edu.knoldus.operations
 
-import edu.knoldus.models.Credentials
+import edu.knoldus.models.{Credentials, Item}
+import org.scalatest.AsyncFlatSpec
 
 class checkoutServicesTest extends AsyncFlatSpec {
 
-   val user = Credentials("12345","raj","raj12345")
+  val user = Credentials("12345", "raj", "raj12345")
   val checkoutService = new checkoutServices(user)
-   val userTwo = Credentials("12345","roh","12345")
+  val userTwo = Credentials("12345", "roh", "12345")
   val checkoutServiceTwo = new checkoutServices(userTwo)
 
 
@@ -40,8 +41,6 @@ class checkoutServicesTest extends AsyncFlatSpec {
   "get price method" should "return total price" in {
     checkoutService.getTotalPrice.map(price => assert(price == 0.0))
   }
-
-
 
 
 }
