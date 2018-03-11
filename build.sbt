@@ -28,7 +28,7 @@ lazy val apiResources = (project in file("api-resources"))
     libraryDependencies ++= Seq(testDeps,loggerDeps)
   )
 
-lazy val checkout = (project in file("checkout"))
+lazy val checkout = (project in file("checkOut"))
   .dependsOn(inventory,accounts)
   .settings(
     libraryDependencies ++= Seq(testDeps,loggerDeps)
